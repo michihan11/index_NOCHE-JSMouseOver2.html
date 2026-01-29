@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> MouseOver </title>
+<style>
+ body { font-family: Rockwell; font-size: 20px; text-align: center; }
+ th { font-size: 30px; }
+ table { margin-left: auto; margin-right: auto; }
+
+ #table th {
+   text-align: center;
+   font-weight: bold; }
+
+ #table td {
+   width: 150px;
+   white-space: nowrap;
+   text-align: center;
+   vertical-align: bottom;
+   padding-top: 5px;
+   padding-bottom: 12px;
+   cursor: pointer; }
+
+ #table .f {
+   background-color: #ef365a; }
+
+ #table .v {
+   background-color: #09b511;
+   color: #fff; }
+
+ #table .g {
+  background-color: #efec36;}
+
+ #table .p {
+    background-color: #8510cf;
+    color: #fff; }
+
+#table .d {
+    background-color: #55a7e6; }
+</style>
+</head>
+
+<body>
+  <table id="table">
+    <tr>
+      <th colspan="5">The Five Food Groups</th>
+    </tr>
+    <tr>
+      <td class="f"><strong><u>Fruits</u></strong>
+        <br>Banana
+        <br>Mango
+        <br>Watermelon
+      </td>
+      <td class="w"><strong><u>Vegetables</u></strong>
+         <br>Broccoli
+         <br>Cabbage
+         <br>Carrots
+      </td>
+      <td class="g"><strong><u>Grains</u></strong>
+         <br>Rice
+         <br>Bread
+         <br>Pasta
+      </td>
+      <td class="p"><strong><u>Protein</u></strong>
+         <br>Eggs
+         <br>Chicken
+         <br>Fish
+      </td>
+      <td class="d"><strong><u>Dairy</u></strong>
+         <br>Milk
+         <br>Cheese
+         <br>Yogurt 
+       </td>
+     </tr>
+  </table>
+
+<script>
+  table.onmouseover = function(event) {
+  let target = event.target;
+  target.style.background = 'pink';
+
+  text.value += 'over -> ${target.tagName}\n';
+  text.scrollTop = text.scrollHeight;
+}
+
+table.onmouseout = function(event) {
+  let target = event.target;
+  target.style.background = '';
+
+  text.value += 'out -> ${target.tagName}\n';
+  text.scrollTop = text.scrollHeight;
+}
+</script>
+<p>The</p>
